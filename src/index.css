@@ -1,0 +1,257 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Fredoka', 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Hide default number input arrows so custom -/+ buttons are clean */
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+.font-display {
+  font-family: 'Fredoka', 'Outfit', system-ui, sans-serif;
+}
+
+/* Retro Graph Grid with Pastel Blue/Neutral Grid Lines */
+.retro-grid-bg {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(to right, rgba(186, 230, 253, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(186, 230, 253, 0.45) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* Retro Hard 2D Shadow Utilities */
+.shadow-retro-sm {
+  box-shadow: 1.5px 1.5px 0px #27272A;
+}
+
+.shadow-retro {
+  box-shadow: 2.5px 2.5px 0px #27272A;
+}
+
+.shadow-retro-lg {
+  box-shadow: 4px 4px 0px #27272A;
+}
+
+.shadow-retro-window {
+  box-shadow: 3.5px 3.5px 0px #27272A;
+}
+
+/* Retro Pastel Slider for Flock Population */
+.retro-heart-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 9999px;
+  border: 1.8px solid #27272A;
+  outline: none;
+  background: #BAE6FD;
+  box-shadow: inset 0 1px 2px rgba(39, 39, 42, 0.15);
+  transition: all 0.2s ease;
+}
+
+.retro-heart-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background-color: #FEF08A;
+  border: 2px solid #27272A;
+  cursor: pointer;
+  box-shadow: 1px 1.5px 0px #27272A;
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.retro-heart-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+  background-color: #FACC15;
+}
+
+.retro-heart-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background-color: #FEF08A;
+  border: 2px solid #27272A;
+  cursor: pointer;
+  box-shadow: 1px 1.5px 0px #27272A;
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.retro-heart-slider::-moz-range-thumb:hover {
+  transform: scale(1.25);
+  background-color: #FACC15;
+}
+
+/* Time of Day Sun & Sky Gradient Slider */
+.retro-time-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 9999px;
+  border: 1.8px solid #27272A;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    #FED7AA 0%,
+    #FEF08A 30%,
+    #BAE6FD 55%,
+    #FB923C 80%,
+    #7DD3FC 100%
+  );
+  box-shadow: inset 0 1px 2px rgba(39, 39, 42, 0.15);
+}
+
+.retro-time-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background-color: #BEF264;
+  border: 2px solid #27272A;
+  cursor: grab;
+  box-shadow: 1px 1.5px 0px #27272A;
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.retro-time-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+  background-color: #A3E635;
+}
+
+.retro-time-slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.35);
+}
+
+.retro-time-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background-color: #BEF264;
+  border: 2px solid #27272A;
+  cursor: grab;
+  box-shadow: 1px 1.5px 0px #27272A;
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.retro-time-slider::-moz-range-thumb:hover {
+  transform: scale(1.25);
+  background-color: #A3E635;
+}
+
+/* 3-Tier Bulletproof Responsive Control Bar Layout */
+.control-bar-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.control-bar-subgroup-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: fit-content;
+}
+
+.control-bar-subgroup-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: fit-content;
+}
+
+.divider-tablet {
+  display: none;
+}
+
+.divider-laptop {
+  display: none;
+}
+
+/* Tablet (>= 640px): 2 balanced rows */
+@media (min-width: 640px) {
+  .control-bar-root {
+    gap: 6px;
+  }
+  .control-bar-subgroup-top {
+    flex-direction: row;
+    gap: 6px;
+  }
+  .control-bar-subgroup-bottom {
+    flex-direction: row;
+    gap: 6px;
+  }
+  .divider-tablet {
+    display: block;
+  }
+}
+
+/* Laptop & Desktop (>= 980px): 1 sleek single line */
+@media (min-width: 980px) {
+  .control-bar-root {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .divider-laptop {
+    display: block;
+  }
+}
+
+/* Retro Custom Scrollbar */
+.retro-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.retro-scrollbar::-webkit-scrollbar-track {
+  background: rgba(186, 230, 253, 0.35);
+  border-radius: 9999px;
+}
+.retro-scrollbar::-webkit-scrollbar-thumb {
+  background: #FED7AA;
+  border: 1.5px solid #27272A;
+  border-radius: 9999px;
+}
+.retro-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #FB923C;
+}
+.retro-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #FED7AA rgba(186, 230, 253, 0.35);
+}
+
+/* Responsive landscape mobile optimizations for modal */
+@media (orientation: landscape) and (max-height: 560px) {
+  .landscape-modal-container {
+    max-width: 44rem !important;
+    max-height: calc(100dvh - 0.75rem) !important;
+  }
+  .landscape-modal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}

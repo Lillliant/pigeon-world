@@ -1,0 +1,6 @@
+{
+  "name": "Pigeon World: 3D Interactive Simulator",
+  "description": "An interactive 3D pigeon simulator where you can toss seeds, explore lively worlds, and watch a flock of pigeons wander, fly, and perch.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
